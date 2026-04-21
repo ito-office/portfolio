@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITO'S PORTFOLIO</title>
     <meta name="description" content="伊東のポートフォリオです。">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -12,32 +13,33 @@
         <h1>ITO'S PORTFOLIO</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#works">Works</a></li>
+                <li><a href="#profile">Profile</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="works" class="section">
-    <h2>Works</h2>
-    <div class="projects-grid">
+
+    <section id="works" class="section">
+        <h2 class="section-title">Works</h2>
+        <div class="projects-grid">
         
         <article class="project-card">
             <div class="card-image">
-                <img src="images/arumonde.png" alt="Arumonde">
+                <img src="images/Arumonde.png" alt="Arumonde">
             </div>
             <div class="card-content">
                 <h3>Arumonde（アルモンデ）</h3>
-                <p>AIが冷蔵庫の残り物からレシピを提案。「献立を考える」負担を減らす家事支援アプリです。</p>
+                <p>AIが冷蔵庫の残り物からレシピを提案。「献立を考える」負担を減らす家事支援アプリのLPです。</p>
                 <a href="https://ito-office.github.io/Arumonde/" class="btn">サイトを見る</a>
             </div>
         </article>
 
         <article class="project-card">
             <div class="card-image">
-                <img src="images/bakery.png" alt="Bakery Register Game">
+                <img src="images/Bakery-Register-Game.png" alt="Bakery Register Game">
             </div>
             <div class="card-content">
                 <h3>Bakery Register Game</h3>
@@ -48,7 +50,7 @@
 
         <article class="project-card">
             <div class="card-image">
-                <img src="images/packing.png" alt="Packing Games">
+                <img src="images/packing_games.png" alt="Packing Games">
             </div>
             <div class="card-content">
                 <h3>Packing Games</h3>
@@ -59,21 +61,85 @@
 
         <article class="project-card">
             <div class="card-image">
-                <img src="images/cafe.png" alt="cafe_web">
+                <img src="images/cafe_website.png" alt="cafe_web">
             </div>
             <div class="card-content">
                 <h3>cafe_web</h3>
-                <p>落ち着いた雰囲気のカフェをイメージしたWebサイト。CSSによる緻密なレイアウトと清潔感のあるUIを追求しています。</p>
+                <p>初めて制作したWebサイト。落ち着いた雰囲気のカフェをイメージしました。</p>
                 <a href="https://ito-office.github.io/cafe_web/" class="btn">サイトを見る</a>
             </div>
         </article>
     </div>
 </section>
 
-    </main>
+<section id="profile" class="section">
+    <h2 class="section-title">Profile</h2>
+    <div class="profile-card">
+        <div class="profile-intro">
+            <!-- <h3>「現場の視点」を、AIと共に形にする。</h3> -->
+            <p>
+                異業種での多様な経験から学んだのは、常に「使う人の気持ち」に寄り添うことの大切さです。
+                日々の生活の中にある「これ、もっとこうなったらいいな」という気づきを、
+                技術とデザインで実現できるよう日々研鑽を積んでいます。
+            </p>
+        </div>
+
+        <div class="career-summary">
+            <div class="career-item">
+                <span class="category">Logic</span>
+                <h4>倉庫事務 (7年)</h4>
+                <p>正確さと効率を追求する姿勢の土台。</p>
+            </div>
+            <div class="career-item">
+                <span class="category">Support</span>
+                <h4>舞台裏方・マネージャー</h4>
+                <p>現場を支える調整力と、ユーザーを思う黒子精神。</p>
+            </div>
+            <div class="career-item">
+                <span class="category">Solution</span>
+                <h4>営業職 (2年)</h4>
+                <p>話しやすさ」を大切に、相手の小さなお困りごとを丁寧に汲み取る経験。</p>
+            </div>
+            <div class="career-item active">
+                <span class="category">Challenge</span>
+                <h4>フロントエンドエンジニア養成科 (受講中)</h4>
+                <p>現在、創造社リカレントスクール三宮校にて、フロントエンド技術を習得中。</p>
+            </div>
+        </div>
+
+        <!-- <div class="philosophy-box">
+            <p class="ai-collaboration">
+                制作においては、<span>AIを最高の相棒</span>として活用しています。
+                複雑なコードの構築から画像生成まで、納得いくまでAIと対話を重ねて生まれた作品には、
+                技術を超えた「愛」を持って取り組んでいます。
+            </p>
+        </div> -->
+
+        <div class="skills-box">
+            <ul>
+                <li>HTML5 / CSS3 / JavaScript</li>
+                <li>UI/UX Design</li>
+                <li>VS Code / Git / GitHub / Figma</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-card">
+        <p>お気軽にお問い合わせください。</p>
+        
+        <div class="contact-links">
+            <a href="mailto:ito.office.it@gmail.com" class="contact-btn email">メールを送る</a>
+            <a href="https://github.com/ito-office" target="_blank" rel="noopener" class="contact-btn github">GitHub</a>
+        </div>
+    </div>
+</section>
+</main>
     
     <footer>
-        <p>&copy; 2026 ITO'S PORTFOLIO</p>
+        <p>&copy; ITO'S PORTFOLIO</p>
     </footer>
 </body>
 </html>
