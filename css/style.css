@@ -1,0 +1,233 @@
+/* ============================================================
+   1. 基本設定 & 変数
+   ============================================================ */
+:root {
+    --bg-color: #f5f5f0;       /* 全体の背景：柔らかなサンドベージュ */
+    --card-bg: #ffffff;        /* カードの背景：白 */
+    --text-main: #333333;      /* メインの文字色 */
+    --text-sub: #666666;       /* 補足情報の文字色 */
+    --accent-color: #8c8c7a;   /* アクセント：落ち着いた石材色（ストーン） */
+    --accent-hover: #6e6e5f;   /* ホバー時のアクセント色 */
+    --border-color: #e0e0d5;   /* 境界線 */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 柔らかな影 */
+    --font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   2. レイアウト
+   ============================================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+/* ============================================================
+   3. ヘッダー & ナビゲーション
+   ============================================================ */
+header {
+    background-color: var(--bg-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* ============================================================
+   4. 自己紹介（About）
+   ============================================================ */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* ============================================================
+   5. 制作物（Works）カードレイアウト
+   ============================================================ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 画像エリア */
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #e8e8e0;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+/* テキストエリア */
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--text-sub);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ============================================================
+   6. 連絡先（Contact）& フッター
+   ============================================================ */
+.contact-links {
+    text-align: center;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px 20px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 2px;
+    transition: opacity 0.3s;
+}
+
+.contact-links a:hover {
+    opacity: 0.6;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    border-top: 1px solid var(--border-color);
+}
+
+/* ============================================================
+   7. レスポンシブ対応（スマホ表示）
+   ============================================================ */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* スマホでは1列に */
+    }
+}
